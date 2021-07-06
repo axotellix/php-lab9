@@ -1,0 +1,294 @@
+@font-face {
+  font-family: "Optima";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Optima"), url("../../fonts/OPTIMA.woff") format("woff");
+}
+@font-face {
+  font-family: "Optima Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Optima Italic"), url("../../fonts/Optima_Italic.woff") format("woff");
+}
+@font-face {
+  font-family: "Optima Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Optima Medium"), url("../../fonts/Optima Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "Optima Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Optima Bold"), url("../../fonts/OPTIMA_B.woff") format("woff");
+}
+html {
+  font: 10px "Montserrat", sans-serif;
+}
+
+body {
+  background: #fafafa;
+  color: #10141a;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+header {
+  width: 90%;
+  height: 80px;
+  padding-top: 50px;
+  background: #10141a;
+  border-radius: 0 0 20px 20px;
+  z-index: 9999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: fixed;
+  left: 50%;
+  top: 0;
+  -webkit-transform: translateX(-50%) translateY(0);
+          transform: translateX(-50%) translateY(0);
+}
+header .navlink {
+  max-width: 180px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 100px;
+          flex: 1 0 100px;
+  margin: 10px;
+  margin-bottom: 0;
+  padding: 10px;
+  padding-bottom: 20px;
+  font-size: 2rem;
+  color: #949ca2;
+  text-align: center;
+  border-bottom: 4px solid transparent;
+}
+header .navlink[data-state=active] {
+  border-color: #d8dbdd;
+  color: #d8dbdd;
+}
+header .navlink:hover {
+  border-color: #d8dbdd;
+  color: #d8dbdd;
+}
+
+main {
+  width: 90%;
+  margin: 120px auto;
+  padding: 50px;
+  border-radius: 10px;
+  background: #eeeff0;
+}
+
+ul {
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+ul li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+  padding: 25px;
+  border-radius: 8px;
+  margin: 10px 0;
+  background: #dde0e2;
+  font-size: 2rem;
+  color: #10141a;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+ul li .delete, ul li .edit {
+  padding: 20px;
+  font-size: 1.5rem;
+  background: #D62828;
+  border-radius: 5px;
+  width: 200px;
+  margin-top: 15px;
+  color: #fafafa;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+ul li .delete:hover, ul li .edit:hover {
+  background: #db3d3d;
+}
+ul li .edit {
+  background: #1EB658;
+}
+ul li .edit:hover {
+  background: #22cc63;
+}
+ul li div {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 50px;
+          flex: 1 0 50px;
+  min-height: 24px;
+  margin: 0 5px;
+  margin-top: 20px;
+}
+ul li div::before {
+  content: attr(data-type);
+  font-size: 1.2rem;
+  color: #4a5d79;
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: -20px;
+  -webkit-transform: translateX(0) translateY(0);
+          transform: translateX(0) translateY(0);
+}
+ul li .f-name, ul li .s-name, ul li .t-name {
+  -ms-flex-preferred-size: 80px;
+      flex-basis: 80px;
+}
+ul li .gender {
+  -ms-flex-preferred-size: 10px;
+      flex-basis: 10px;
+}
+ul li .birthday {
+  -ms-flex-preferred-size: 25px;
+      flex-basis: 25px;
+}
+ul li .phone {
+  -ms-flex-preferred-size: 100px;
+      flex-basis: 100px;
+}
+ul li .address {
+  -ms-flex-preferred-size: 100px;
+      flex-basis: 100px;
+}
+ul li .comment {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  background: #d0d3d6;
+  padding: 20px;
+  margin-top: 45px;
+  text-align: left !important;
+  border-radius: 7px;
+}
+ul li .comment::before {
+  content: attr(data-type);
+  font-size: 1.2rem;
+  color: #4a5d79;
+  position: absolute;
+  left: 12px;
+  top: -20px;
+  -webkit-transform: translateX(0) translateY(0);
+          transform: translateX(0) translateY(0);
+}
+
+form {
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+form h2 {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  color: #10141a;
+  font-size: 1.7rem;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+form label {
+  font-size: 1.4rem;
+  color: rgba(16, 20, 26, 0.8);
+  margin-top: 20px;
+}
+form label:first-of-type {
+  margin-top: 0;
+}
+form input, form button {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+  padding: 20px;
+  color: #10141a;
+  font-size: 1.5rem;
+  background: #bdc2c5;
+  border-radius: 5px;
+  border: 2px solid #b7bdc0;
+  margin: 10px 0;
+  -webkit-transition: background 0.25s;
+  transition: background 0.25s;
+}
+form input:focus, form button:focus {
+  background: #caced1;
+}
+form button {
+  max-width: 400px;
+  margin-top: 25px;
+  background: #1EB658;
+  color: #fafafa;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+form button:hover {
+  background: #22cc63;
+}
